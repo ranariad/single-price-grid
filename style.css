@@ -1,0 +1,114 @@
+/* ## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%) */
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: hsl(204, 43%, 93%);
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+.wrapper {
+  display: grid;
+  border-radius: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "a a" "b c";
+  background-color: #fff;
+  margin: 20px ;
+}
+.box {
+  padding: 40px;
+}
+.joinBox {
+  grid-area: a;
+}
+.joinBox h1 {
+  color: hsl(179, 62%, 43%);
+  padding-bottom: 20px;
+  font-size: 26px;
+}
+.joinBox h3 {
+  color: hsl(71, 73%, 54%);
+  padding-bottom: 20px;
+}
+.joinBox p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.4;
+  font-size: 25px;
+}
+.subBox {
+  grid-area: b;
+  background-color: hsl(179, 62%, 43%);
+  color: #fff;
+}
+.subBox h2 {
+  font-size: 20px;
+}
+.subBox .price {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.subBox .price p {
+  font-weight: 700;
+  padding-right: 10px;
+  font-size: 20px;
+}
+.subBox .price span {
+  /* color: hsl(218, 22%, 67%); */
+  color: hsl(204, 43%, 93%);
+}
+.subBox p {
+  padding-bottom: 20px;
+}
+.subBox a {
+  text-decoration: none;
+  background-color: hsl(71, 73%, 54%);
+  padding: 15px 30px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+}
+.whyBox {
+  grid-area: c;
+  background-color: hsl(179, 48%, 62%);
+  color: #fff;
+}
+.whyBox h2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.whyBox ul {
+  list-style: none;
+}
+.whyBox ul li {
+  padding-bottom: 4px;
+}
+
+@media only screen and (max-width: 425px) {
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-areas: "a" "b" "c";
+  }
+}
